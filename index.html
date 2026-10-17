@@ -78,7 +78,6 @@ nav{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:auto;display:g
 .sh-box{position:absolute;bottom:0;left:0;right:0;max-width:560px;margin:auto;background:#fff;border-radius:24px 24px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));max-height:92vh;overflow:auto;animation:su .25s ease}
 @keyframes su{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
 .grab{width:42px;height:4px;background:var(--ln);border-radius:4px;margin:0 auto 12px}
-.pub nav{display:none}.pub .app{padding-bottom:20px}
 </style>
 </head>
 <body>
@@ -115,7 +114,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const J=v=>esc(JSON.stringify(v));
 let S={u:null,ud:null,profiles:[],favs:(()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")}catch(e){return[]}})()};
-let route="home",arg=null,cat="all",gen="m",q="",azc="morning",ph="",az={},fresh=null,amode="login",signup={},afterAuth=null,pending=null,codes=[];
+let route="home",arg=null,cat="all",gen="m",q="",azc="morning",ph="",az={},fresh=null,amode="login",signup={},afterAuth=null,pending=null,codes=[],PUB=null;
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),2600)}
 function vib(n){try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}}
 
@@ -224,7 +223,8 @@ function loginCard(t){return `<div class="card empty">${t}<br><br><button class=
 const NAVOF={detail:"profiles",form:"profiles",tasbeeh:"more",charity:"more",favs:"more",account:"more",auth:"more",admin:"more"};
 function go(r,a){route=r;arg=a||null;render();scrollTo({top:0})}
 function render(){
- document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("on",b.dataset.r===(NAVOF[route]||route)));
+ const cur=PUB?route:(NAVOF[route]||route);
+ document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("on",b.dataset.r===cur));
  $("#view").innerHTML=V[route]();updHead();
  if(route==="form")bindForm();
  if(route==="detail")loadFam();
@@ -243,6 +243,13 @@ home(){
  <h3>دعاء اليوم</h3><div class="card"><p class="dua">${esc(dua)}</p><div class="acts"><button class="btn l" onclick="copyT(${J(dua)})">نسخ</button><button class="btn o" onclick="shareT(${J(dua)})">مشاركة</button></div></div>
  ${S.profiles.length?`<h3>آخر الملفات</h3>${S.profiles.slice(0,2).map(p=>pcard(p)).join("")}`:""}
  ${sub}`},
+pubpage(){
+ const p=PUB.p,o=PUB.o;
+ return `<div class="card" style="text-align:center;background:linear-gradient(145deg,#E6EEE5,#fff)">${o.photo?`<img class="photo" src="${o.photo}">`:""}<div class="mu">${who(p)}</div><h2 style="color:var(--g);font-size:24px;margin:4px 0">${esc(p.name)}</h2><span class="chip">${esc(p.rel)}</span>${p.date?`<p class="mu" style="margin:8px 0 0">${greg(p.date)}<br>${hijri(p.date)}</p>`:""}</div>
+ ${p.memory?`<div class="card"><b style="color:var(--g)">ذكرى طيبة</b><p>${esc(p.memory)}</p></div>`:""}
+ <div class="card"><p class="dua" style="text-align:center">${esc(p.dua)}</p><div style="text-align:center"><div class="big" id="pc">${PUB.n}</div><div class="mu">دعوة له</div></div><button class="btn gd f" style="margin-top:10px" onclick="pubPray()">🤲 ادعُ له</button><div class="acts"><button class="btn l" onclick="copyT(${J(p.dua)})">نسخ الدعاء</button><button class="btn o" onclick="shareT(${J(who(p)+": "+p.name+"\n\n"+p.dua)},location.href)">مشاركة</button></div></div>
+ <div class="card" style="text-align:center"><b style="color:var(--g)">زد من الأجر</b><p class="mu" style="margin:3px 0 10px">أدعية وأذكار ومسبحة لتهدي ثوابها له.</p><div class="acts"><button class="btn l" onclick="go('duas')">الأدعية</button><button class="btn l" onclick="go('azkar')">الأذكار</button><button class="btn l" onclick="go('tasbeeh')">المسبحة</button></div></div>
+ <button class="btn o f" onclick="goApp()">أنشئ صفحة لمن تحب</button>`},
 profiles(){
  if(!S.u)return `<h3>ملفات من أحب</h3>`+loginCard("سجّل الدخول لتحفظ ملفات من تحب بأمان<br>وتفتحها من أي جهاز.");
  return `<div class="row"><h3 style="flex:1;margin:4px 0">ملفات من أحب</h3><button class="btn s" onclick="newP()">＋ إضافة</button></div>${S.profiles.length?S.profiles.map(p=>pcard(p,1)).join(""):'<div class="card empty">♡<br>لا توجد ملفات بعد.<br>ابدأ بإضافة أول ملف.</div>'}${!isPro()&&S.profiles.length?`<p class="mu" style="text-align:center">الخطة المجانية: ملف واحد</p>`:""}`},
@@ -419,16 +426,20 @@ async function loadCodes(){
 function sendCode(c){const p=prompt("رقم واتساب العميل (01xxxxxxxxx)");if(!p)return;const n=p.replace(/\D/g,"").replace(/^0/,"20");openWA(`شكرًا لاشتراكك في صدقة جارية 🤍\nكود التفعيل الخاص بك:\n${c}\n\nافتح التطبيق ← حسابي ← اكتب الكود ← تفعيل.`,n)}
 
 /* ===== الصفحة العامة (تعمل دائمًا حتى بعد انتهاء الاشتراك) ===== */
+function goApp(){location.hash="";location.reload()}
+function pubPray(){
+ if(PUB.busy)return;PUB.busy=true;setTimeout(()=>PUB.busy=false,1200);
+ PUB.n++;const e=$("#pc");if(e)e.textContent=PUB.n;vib(20);toast("تقبّل الله دعاءك 🤍");
+ FB.updateDoc(PUB.ref,{count:FB.increment(1)}).catch(()=>{});
+}
 async function publicView(id){
- document.body.classList.add("pub");$("#hb").style.display="none";
+ $("#hb").style.display="none";
  try{
   const ref=FB.doc(FB.db,"pages",id),s=await FB.getDoc(ref);if(!s.exists())throw 0;
-  const o=s.data(),p={g:o.g,name:o.n,rel:o.r,date:o.d,memory:o.m,dua:o.u};let n=o.count||0,busy=false;
-  window.pubPray=()=>{if(busy)return;busy=true;setTimeout(()=>busy=false,1200);n++;$("#pc").textContent=n;vib(20);toast("تقبّل الله دعاءك 🤍");FB.updateDoc(ref,{count:FB.increment(1)}).catch(()=>{})};
-  $("#view").innerHTML=`<div class="card" style="text-align:center;background:linear-gradient(145deg,#E6EEE5,#fff)">${o.photo?`<img class="photo" src="${o.photo}">`:""}<div class="mu">${who(p)}</div><h2 style="color:var(--g);font-size:24px;margin:4px 0">${esc(p.name)}</h2><span class="chip">${esc(p.rel)}</span>${p.date?`<p class="mu" style="margin:8px 0 0">${greg(p.date)}<br>${hijri(p.date)}</p>`:""}</div>
-  ${p.memory?`<div class="card"><b style="color:var(--g)">ذكرى طيبة</b><p>${esc(p.memory)}</p></div>`:""}
-  <div class="card"><p class="dua" style="text-align:center">${esc(p.dua)}</p><div style="text-align:center"><div class="big" id="pc">${n}</div><div class="mu">دعوة له</div></div><button class="btn gd f" style="margin-top:10px" onclick="pubPray()">🤲 ادعُ له</button><div class="acts"><button class="btn l" onclick="copyT(${J(p.dua)})">نسخ الدعاء</button></div></div>
-  <button class="btn o f" onclick="location.hash='';location.reload()">أنشئ صفحة لمن تحب</button>`;
+  const o=s.data();
+  PUB={o,ref,n:o.count||0,busy:false,p:{g:o.g,name:o.n,rel:o.r,date:o.d,memory:o.m,dua:o.u}};
+  $("nav").innerHTML=`<button class="nav-btn" data-r="pubpage" onclick="go('pubpage')"><span>♡</span>الصفحة</button><button class="nav-btn" data-r="duas" onclick="go('duas')"><span>۞</span>الأدعية</button><button class="nav-btn" data-r="azkar" onclick="go('azkar')"><span>☼</span>الأذكار</button><button class="nav-btn" data-r="tasbeeh" onclick="go('tasbeeh')"><span>◉</span>المسبحة</button><button class="nav-btn" onclick="goApp()"><span>＋</span>صفحتك</button>`;
+  route="pubpage";render();
  }catch(e){$("#view").innerHTML='<div class="card empty">هذه الصفحة غير متاحة.</div>'}
 }
 
