@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F3329">
+<title>صدقة جارية | دعاء ووفاء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0F3329;--g2:#184A3B;--gold:#B8923F;--gold2:#D4B467;--gl:#F1E4BE;--cream:#F8F6F0;--tx:#22332C;--mu:#76847C;--ln:#E7E4DA;--soft:#EDF3EE;--sh:0 6px 22px rgba(15,51,41,.07)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--cream);color:var(--tx);font-family:Tajawal,Tahoma,Arial,sans-serif;line-height:1.8}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.app{max-width:560px;margin:auto;min-height:100vh;padding-bottom:94px}
+.top{background:linear-gradient(160deg,#0F3329,#184A3B);color:#fff;padding:18px 18px 24px;border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+.top:after{content:"۞";position:absolute;left:-14px;top:0;font-size:120px;color:rgba(255,255,255,.05)}
+.brand{display:flex;align-items:center;gap:11px;position:relative;z-index:1}
+.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--gl);color:var(--g);font-size:24px;flex-shrink:0}
+.brand h1{font-size:19px;margin:0;font-weight:800}.brand p{font-size:11px;color:#CFE0D6;margin:0}
+.pill{margin-right:auto;border:1px solid rgba(212,180,103,.6);color:var(--gl);background:rgba(255,255,255,.06);border-radius:20px;padding:4px 12px;font-size:11px;white-space:nowrap;font-weight:700}
+.pill.pro{background:var(--gold);border-color:var(--gold);color:#fff}
+main{padding:14px}
+.card{background:#fff;border:1px solid var(--ln);border-radius:18px;padding:15px;margin-bottom:12px;box-shadow:var(--sh)}
+.hero{background:linear-gradient(135deg,#E6EEE5,#FAF5E6);border:1px solid #E1E4D8;border-radius:20px;padding:18px;margin-bottom:12px}
+.hero h2{margin:0;color:var(--g);font-size:19px;font-weight:800}.hero p{font-size:12.5px;color:#5F6F66;margin:4px 0 12px}
+.up{background:linear-gradient(135deg,#0F3329,#1F5744);color:#fff;border-radius:20px;padding:17px;margin-bottom:12px;position:relative;overflow:hidden}
+.up:after{content:"✧";position:absolute;left:12px;top:-6px;font-size:70px;color:rgba(212,180,103,.18)}
+.up h3{margin:0;color:var(--gl);font-size:16px}.up p{font-size:12px;color:#D5E4DB;margin:4px 0 11px}
+.up .pr2{font-size:26px;font-weight:800;color:#fff}.up .pr2 small{font-size:12px;font-weight:400;color:#CFE0D6}
+h3{font-size:15px;color:var(--g);margin:16px 0 9px;font-weight:800}
+.row{display:flex;gap:8px;align-items:center}
+.mu{font-size:12px;color:var(--mu)}
+.btn{border:0;background:var(--g);color:#fff;border-radius:13px;padding:11px 15px;font-weight:700;font-size:13px}
+.btn:disabled{opacity:.6}
+.btn.l{background:var(--soft);color:var(--g);border:1px solid #DCE7DD}
+.btn.o{background:transparent;color:var(--g);border:1px solid var(--ln)}
+.btn.d{background:#FBEDEC;color:#983D35}
+.btn.gd{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff}
+.btn.wa{background:#1FA855;color:#fff}
+.btn.f{width:100%}.btn.s{padding:6px 11px;font-size:11px}
+.acts{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.acts .btn{flex:1;min-width:80px}
+.lock{font-size:9px;background:var(--gl);color:#7A5C14;border-radius:8px;padding:1px 6px;margin-right:4px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{border:1px solid var(--ln);background:#fff;border-radius:16px;padding:14px 10px;text-align:right;color:var(--tx)}
+.tile i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--soft);color:var(--g);font-size:20px;font-style:normal;margin-bottom:7px}
+.tile b{display:block;font-size:13px;color:var(--g)}.tile small{font-size:10px;color:var(--mu)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.stat{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:11px 6px;text-align:center}
+.stat b{display:block;color:var(--g);font-size:20px}.stat span{font-size:10px;color:var(--mu)}
+.dua{font-size:16.5px;line-height:2.1;color:#34473D;margin:4px 0}
+label{display:block;font-size:12px;color:var(--g);font-weight:700;margin:12px 0 5px}
+input,select,textarea{width:100%;border:1px solid var(--ln);background:#fff;color:var(--tx);border-radius:12px;padding:11px;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+textarea{min-height:80px;resize:vertical}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0 12px}
+.chip{border:1px solid var(--ln);background:#fff;color:var(--mu);border-radius:25px;padding:6px 11px;font-size:11px}
+.chip.on{background:var(--g);border-color:var(--g);color:#fff}
+.pr{display:flex;gap:12px;align-items:center}
+.pr img,.pr .logo{width:60px;height:60px;border-radius:16px;object-fit:cover;flex-shrink:0}
+.pr .in{flex:1;min-width:0}.pr b{color:var(--g)}
+.photo{width:110px;height:110px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 10px;border:3px solid var(--gl);background:var(--soft)}
+.big{font-size:44px;line-height:1.4;font-weight:800;color:var(--g)}
+.empty{text-align:center;padding:24px 10px;color:var(--mu);font-size:13px}
+.tb{width:165px;height:165px;border-radius:50%;border:9px solid #DCE9DE;background:var(--g);color:#fff;font-size:19px;font-weight:700;box-shadow:0 0 0 5px #F3EBD6;margin:12px auto;display:block;user-select:none}
+.tb:active{transform:scale(.97)}
+.zk{border-right:4px solid var(--gold);cursor:pointer}.zk.done{opacity:.5;border-right-color:#6AA57C}
+.bar{height:6px;background:var(--soft);border-radius:6px;overflow:hidden;margin-top:10px}.bar div{height:100%;background:var(--gold)}
+.ft{list-style:none;padding:0;margin:8px 0}.ft li{font-size:13px;padding:3px 0}.ft li:before{content:"✓";color:var(--gold);font-weight:800;margin-left:8px}
+.code{font-family:monospace;font-size:14px;letter-spacing:1px;direction:ltr;display:inline-block}
+nav{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.97);border-top:1px solid var(--ln);padding:6px 2px calc(6px + env(safe-area-inset-bottom));z-index:10}
+.nav-btn{border:0;background:transparent;color:#8A958D;font-size:10px;padding:3px 0}
+.nav-btn span{display:block;font-size:20px;line-height:1.5}.nav-btn.on{color:var(--g);font-weight:700}.nav-btn.on span{color:var(--gold)}
+#toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:var(--g);color:#fff;padding:9px 18px;border-radius:25px;font-size:12px;opacity:0;transition:.25s;pointer-events:none;z-index:80;max-width:90%;text-align:center}
+#toast.show{opacity:1}
+#sheet{position:fixed;inset:0;z-index:60;display:none}#sheet.open{display:block}
+.sh-bg{position:absolute;inset:0;background:rgba(10,30,24,.55)}
+.sh-box{position:absolute;bottom:0;left:0;right:0;max-width:560px;margin:auto;background:#fff;border-radius:24px 24px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));max-height:92vh;overflow:auto;animation:su .25s ease}
+@keyframes su{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+.grab{width:42px;height:4px;background:var(--ln);border-radius:4px;margin:0 auto 12px}
+.pub nav{display:none}.pub .app{padding-bottom:20px}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="brand"><div class="logo">۞</div><div><h1>صدقة جارية</h1><p>دعاء ووفاء لمن نحب</p></div><button class="pill" id="hb" onclick="headTap()">دخول</button></div></header>
+<main id="view"><div class="empty" style="padding-top:60px">جارٍ التحميل...</div></main>
+<nav>
+<button class="nav-btn" data-r="home" onclick="go('home')"><span>⌂</span>الرئيسية</button>
+<button class="nav-btn" data-r="profiles" onclick="go('profiles')"><span>♡</span>ملفاتي</button>
+<button class="nav-btn" data-r="duas" onclick="go('duas')"><span>۞</span>الأدعية</button>
+<button class="nav-btn" data-r="azkar" onclick="go('azkar')"><span>☼</span>الأذكار</button>
+<button class="nav-btn" data-r="more" onclick="go('more')"><span>☰</span>المزيد</button>
+</nav>
+</div>
+<div id="sheet"></div>
+<div id="toast"></div>
+
+<script>
+/* ===== الإعدادات ===== */
+var CFG={
+ PRICE:50,
+ SUPPORT:"201007799186",
+ SUPPORT_SHOW:"01007799186",
+ FB:{
+  apiKey:"AIzaSyCbqf8_9o35_Z2KDY1_K-8opGduZINQ_4Y",
+  authDomain:"sadaqa-jariya-e4457.firebaseapp.com",
+  projectId:"sadaqa-jariya-e4457",
+  appId:"1:196478702007:web:e10ebb4c9c2a285a209832"
+ }
+};
+
+const FK="sadaqa_favs_v5",TK="sadaqa_tasbeeh_v5";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const J=v=>esc(JSON.stringify(v));
+let S={u:null,ud:null,profiles:[],favs:(()=>{try{return JSON.parse(localStorage.getItem(FK)||"[]")}catch(e){return[]}})()};
+let route="home",arg=null,cat="all",gen="m",q="",azc="morning",ph="",az={},fresh=null,amode="login",signup={},afterAuth=null,pending=null,codes=[];
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),2600)}
+function vib(n){try{navigator.vibrate&&navigator.vibrate(n)}catch(e){}}
+
+/* ===== الاشتراك والدعم ===== */
+const isPro=()=>!!(S.ud&&S.ud.proUntil>Date.now());
+const daysLeft=()=>isPro()?Math.ceil((S.ud.proUntil-Date.now())/864e5):0;
+const isAdmin=()=>!!(S.ud&&S.ud.isAdmin);
+function openWA(msg,num){window.open("https://wa.me/"+(num||CFG.SUPPORT)+"?text="+encodeURIComponent(msg),"_blank")}
+function subWA(){openWA(`السلام عليكم، أريد الاشتراك السنوي في تطبيق صدقة جارية (${CFG.PRICE} جنيه / سنة).\nالاسم: ${S.ud?S.ud.name:"-"}\nرقم الحساب: ${S.ud?S.ud.phone:"-"}`)}
+function supportWA(t){openWA("السلام عليكم، "+(t||"أحتاج مساعدة في تطبيق صدقة جارية")+"\nالاسم: "+(S.ud?S.ud.name:"-")+"\nرقم الحساب: "+(S.ud?S.ud.phone:"-"))}
+function requirePro(reason,fn){if(isPro())return fn();pending=fn;paywall(reason)}
+const REASONS={
+ share:["شارك الملف مع عائلتك","رابط يفتحه أهلك ويدعون له، وتظهر فيه الصورة."],
+ card:["كارت صورة للمشاركة","كارت جميل بصورته ودعائه جاهز للواتساب."],
+ photo:["أضف صورة من تحب","الصورة تجعل الملف أقرب للقلب وأبقى في الذاكرة."],
+ multi:["ملفات غير محدودة","احفظ كل من فقدت: الوالدين والأحباب في مكان واحد."],
+ general:["صدقة جارية PRO","كل المزايا لمدة سنة كاملة."]
+};
+function paywall(r){
+ const x=REASONS[r]||REASONS.general;
+ openSheet(`<div style="text-align:center"><div class="logo" style="margin:0 auto 8px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff">👑</div>
+ <h3 style="margin:0;font-size:18px">${x[0]}</h3><p class="mu" style="margin:3px 0 6px">${x[1]}</p>
+ <div class="big" style="font-size:36px">${CFG.PRICE} <small style="font-size:14px;font-weight:500;color:var(--mu)">جنيه / سنة</small></div>
+ <div class="mu">أقل من 5 جنيهات في الشهر</div></div>
+ <ul class="ft"><li>ملفات غير محدودة بالصور</li><li>رابط عائلي عام لكل ملف</li><li>كارت صورة للدعاء والمشاركة</li><li>تذكير بالذكرى السنوية</li><li>الروابط التي شاركتها تبقى تعمل دائمًا</li></ul>
+ <div class="card" style="background:var(--soft);box-shadow:none"><b style="color:var(--g);font-size:13px">للاشتراك</b>
+ <p class="mu" style="margin:4px 0">1) تواصل مع الدعم على واتساب: <b dir="ltr">${CFG.SUPPORT_SHOW}</b><br>2) أتمّ الدفع وسيصلك كود التفعيل<br>3) اكتب الكود بالأسفل</p></div>
+ <button class="btn wa f" onclick="subWA()">💬 تواصل مع الدعم للاشتراك</button>
+ ${S.u?`<label>لديك كود تفعيل؟</label><div class="row"><input id="ac" placeholder="SJ-XXXX-XXXX" dir="ltr" style="text-align:center"><button class="btn" id="acb" onclick="redeem()">تفعيل</button></div>`:`<button class="btn l f" style="margin-top:10px" onclick="closeSheet();go('auth')">سجّل الدخول أولًا لتفعيل الكود</button>`}
+ <button class="btn o f" style="margin-top:10px" onclick="closeSheet();pending=null">ليس الآن</button>`);
+}
+function openSheet(h){$("#sheet").innerHTML=`<div class="sh-bg" onclick="closeSheet();pending=null"></div><div class="sh-box"><div class="grab"></div>${h}</div>`;$("#sheet").classList.add("open")}
+function closeSheet(){$("#sheet").classList.remove("open")}
+async function redeem(){
+ const code=($("#ac").value||"").trim().toUpperCase();
+ if(!code)return toast("اكتب كود التفعيل");
+ const b=$("#acb");b.disabled=true;
+ try{
+  const cref=FB.doc(FB.db,"codes",code),cs=await FB.getDoc(cref);
+  if(!cs.exists()||cs.data().used)throw 0;
+  const days=cs.data().days||365,until=Math.max(S.ud.proUntil||0,Date.now())+days*864e5,uid=S.u.uid;
+  const bt=FB.writeBatch(FB.db);
+  bt.update(cref,{used:true,usedBy:uid,usedAt:Date.now()});
+  bt.update(FB.doc(FB.db,"users",uid),{proUntil:until,proCode:code});
+  await bt.commit();
+  S.ud.proUntil=until;S.ud.proCode=code;
+  closeSheet();updHead();toast("تم التفعيل 👑 شكرًا لدعمك");
+  const p=pending;pending=null;if(route!=="form")render();if(p)p();
+ }catch(e){toast("الكود غير صحيح أو مستخدم من قبل");b.disabled=false}
+}
+function updHead(){const b=$("#hb");if(!S.u){b.className="pill";b.textContent="دخول"}else if(isPro()){b.className="pill pro";b.textContent="👑 PRO"}else{b.className="pill";b.textContent="فعّل PRO"}}
+function headTap(){if(!S.u)return go("auth");isPro()?go("account"):paywall("general")}
+
+/* ===== البيانات ===== */
+const CATS={mercy:"الرحمة والمغفرة",paradise:"الجنة والنعيم",family:"الأهل والأحباب",patience:"الصبر والسلوان",general:"أدعية عامة"};
+const DUAS=[
+["mercy","اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، ووسّع مدخله.","اللهم اغفر لها وارحمها، وعافها واعفُ عنها، وأكرم نزلها، ووسّع مدخلها."],
+["mercy","اللهم نقّه من الخطايا كما يُنقّى الثوب الأبيض من الدنس، واغسله بالماء والثلج والبرد.","اللهم نقّها من الخطايا كما يُنقّى الثوب الأبيض من الدنس، واغسلها بالماء والثلج والبرد."],
+["mercy","اللهم إن كان محسنًا فزد في إحسانه، وإن كان مسيئًا فتجاوز عن سيئاته.","اللهم إن كانت محسنةً فزد في إحسانها، وإن كانت مسيئةً فتجاوز عن سيئاتها."],
+["mercy","اللهم آنس وحشته، ونوّر قبره، وثبّته عند السؤال.","اللهم آنس وحشتها، ونوّر قبرها، وثبّتها عند السؤال."],
+["mercy","اللهم تجاوز عن تقصيره، واغفر زلّته، واكتب له عفوك ورضوانك.","اللهم تجاوز عن تقصيرها، واغفر زلّتها، واكتب لها عفوك ورضوانك."],
+["paradise","اللهم أسكنه فسيح جناتك، واجعل قبره روضةً من رياض الجنة.","اللهم أسكنها فسيح جناتك، واجعل قبرها روضةً من رياض الجنة."],
+["paradise","اللهم ارزقه الفردوس الأعلى من الجنة.","اللهم ارزقها الفردوس الأعلى من الجنة."],
+["paradise","اللهم أبدله دارًا خيرًا من داره، وأهلًا خيرًا من أهله.","اللهم أبدلها دارًا خيرًا من دارها، وأهلًا خيرًا من أهلها."],
+["paradise","اللهم أجره من عذاب القبر وعذاب النار، وأدخله الجنة برحمتك.","اللهم أجرها من عذاب القبر وعذاب النار، وأدخلها الجنة برحمتك."],
+["paradise","اللهم اجعله مع الذين أنعمت عليهم من النبيين والصديقين والشهداء والصالحين.","اللهم اجعلها مع الذين أنعمت عليهم من النبيين والصديقين والشهداء والصالحين."],
+["family","اللهم ارفع درجته في المهديين، واخلفه في عقبه في الغابرين، واغفر لنا وله يا رب العالمين.","اللهم ارفع درجتها في المهديين، واخلفها في عقبها في الغابرين، واغفر لنا ولها يا رب العالمين."],
+["family","ربِّ ارحمهما كما ربّياني صغيرًا.","ربِّ ارحمهما كما ربّياني صغيرًا."],
+["family","اللهم اجعل ما قدّمه من خير في ميزان حسناته، وبارك في ذريته.","اللهم اجعل ما قدّمته من خير في ميزان حسناتها، وبارك في ذريتها."],
+["family","اللهم اجمعنا به في جنات النعيم على خير، من غير ضرّاء مُضرّة ولا فتنة مُضلّة.","اللهم اجمعنا بها في جنات النعيم على خير، من غير ضرّاء مُضرّة ولا فتنة مُضلّة."],
+["patience","اللهم اربط على قلوب أهله وأحبابه، وارزقهم الصبر والسكينة.","اللهم اربط على قلوب أهلها وأحبابها، وارزقهم الصبر والسكينة."],
+["patience","إنا لله وإنا إليه راجعون، اللهم أجرنا في مصيبتنا واخلفنا خيرًا منها.","إنا لله وإنا إليه راجعون، اللهم أجرنا في مصيبتنا واخلفنا خيرًا منها."],
+["patience","اللهم اجبر قلوبنا على فراقه، وارزقنا الرضا بقضائك.","اللهم اجبر قلوبنا على فراقها، وارزقنا الرضا بقضائك."],
+["patience","اللهم لا تحرمنا أجره، ولا تفتنّا بعده، واغفر لنا وله.","اللهم لا تحرمنا أجرها، ولا تفتنّا بعدها، واغفر لنا ولها."],
+["general","اللهم اغفر لحيّنا وميّتنا، وشاهدنا وغائبنا، وصغيرنا وكبيرنا، وذكرنا وأنثانا.","اللهم اغفر لحيّنا وميّتنا، وشاهدنا وغائبنا، وصغيرنا وكبيرنا، وذكرنا وأنثانا."],
+["general","اللهم اغفر لموتانا وموتى المسلمين، وارحمهم رحمةً واسعة.","اللهم اغفر لموتانا وموتى المسلمين، وارحمهم رحمةً واسعة."],
+["general","اللهم اجعل ذكره بالخير باقيًا، وارزقه من دعاء الصالحين.","اللهم اجعل ذكرها بالخير باقيًا، وارزقها من دعاء الصالحين."],
+["general","اللهم اكتب له الرحمة والمغفرة، وارفع درجاته في عليّين.","اللهم اكتب لها الرحمة والمغفرة، وارفع درجاتها في عليّين."]
+];
+const AZ={
+morning:[["أصبحنا وأصبح الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.",1],["اللهم بك أصبحنا وبك أمسينا، وبك نحيا وبك نموت وإليك النشور.",1],["رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.",3],["قل هو الله أحد، وقل أعوذ برب الفلق، وقل أعوذ برب الناس.",3],["سبحان الله وبحمده.",100],["أستغفر الله وأتوب إليه.",100]],
+evening:[["أمسينا وأمسى الملك لله، والحمد لله، لا إله إلا الله وحده لا شريك له، له الملك وله الحمد وهو على كل شيء قدير.",1],["اللهم بك أمسينا وبك أصبحنا، وبك نحيا وبك نموت وإليك المصير.",1],["رضيت بالله ربًا، وبالإسلام دينًا، وبمحمد ﷺ نبيًا.",3],["قل هو الله أحد، وقل أعوذ برب الفلق، وقل أعوذ برب الناس.",3],["سبحان الله وبحمده.",100],["أستغفر الله وأتوب إليه.",100]],
+prayer:[["أستغفر الله.",3],["اللهم أنت السلام ومنك السلام، تباركت يا ذا الجلال والإكرام.",1],["سبحان الله.",33],["الحمد لله.",33],["الله أكبر.",34]],
+sleep:[["باسمك اللهم أموت وأحيا.",1],["سبحان الله.",33],["الحمد لله.",33],["الله أكبر.",34]]
+};
+const AZN={morning:"الصباح",evening:"المساء",prayer:"بعد الصلاة",sleep:"قبل النوم"};
+const CHARITY=[["💧","سقيا الماء","المساهمة في توفير مياه الشرب عبر جهة موثوقة وشفافة."],["🍲","إطعام الطعام","المشاركة في وجبات للمحتاجين أو دعم مبادرة موثوقة."],["📚","نشر العلم النافع","مشاركة كتاب أو مادة تعليمية موثوقة ومفيدة."],["🌱","غرس الأشجار","زراعة شجرة ورعايتها لينتفع بها الناس."],["🤝","دعم علاج محتاج","المساهمة عبر جمعية أو جهة مرخصة معروفة."],["🧒","كفالة يتيم","اختيار مؤسسة موثوقة توضح آلية الكفالة والمتابعة."],["📖","دعم مكتبة","توفير كتب نافعة في مدرسة أو مركز مجتمعي."],["✎","تعليم مهارة","مساعدة شخص على تعلم القراءة أو مهارة يحتاجها."],["⌂","مساعدة جار محتاج","تقديم المساعدة مع حفظ كرامة الناس وخصوصيتهم."],["☘","التطوع","تخصيص وقت لخدمة كبار السن أو ذوي الاحتياجات."]];
+const REL=["والدي","والدتي","أخي","أختي","زوجي","زوجتي","ابني","ابنتي","جدي","جدتي","قريب / قريبة","صديق / صديقة"];
+
+/* ===== أدوات ===== */
+async function copyT(t){try{await navigator.clipboard.writeText(t)}catch(e){const x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy")}catch(_){}x.remove()}toast("تم النسخ ✓")}
+async function shareT(t,u){if(navigator.share){try{await navigator.share({title:"صدقة جارية",text:t,url:u})}catch(e){}}else copyT(u?t+"\n"+u:t)}
+function hijri(d){try{return new Date(d+"T12:00:00").toLocaleDateString("ar-EG-u-ca-islamic",{day:"numeric",month:"long",year:"numeric"})}catch(e){return""}}
+function greg(d){try{return new Date(d+"T12:00:00").toLocaleDateString("ar-EG",{day:"numeric",month:"long",year:"numeric"})}catch(e){return d}}
+function annDays(date){if(!date)return null;const d=new Date(date+"T12:00:00");if(isNaN(d))return null;const n=new Date(),t=new Date(n.getFullYear(),n.getMonth(),n.getDate());let x=new Date(n.getFullYear(),d.getMonth(),d.getDate());if(x<t)x=new Date(n.getFullYear()+1,d.getMonth(),d.getDate());return Math.round((x-t)/864e5)}
+const who=p=>p.g==="f"?"المرحومة بإذن الله":"المرحوم بإذن الله";
+const defDua=g=>DUAS[0][g==="f"?2:1];
+const find=id=>S.profiles.find(p=>p.id===id);
+const pref=id=>FB.doc(FB.db,"users",S.u.uid,"profiles",id);
+const newId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+function pcard(p,full){return `<div class="card pr">${p.photo?`<img src="${p.photo}" alt="">`:`<div class="logo">♡</div>`}<div class="in"><b>${esc(p.name)}</b><div class="mu">${esc(p.rel)}${p.count?` · دُعي له ${p.count} مرة`:""}</div><div class="row" style="margin-top:6px"><button class="btn l s" onclick="go('detail','${p.id}')">فتح</button>${full?`<button class="btn o s" onclick="go('form','${p.id}')">تعديل</button><button class="btn d s" onclick="delP('${p.id}')">حذف</button>`:""}</div></div></div>`}
+function upCard(title,txt){return `<div class="up"><h3>${title}</h3><p>${txt}</p><div class="row"><div class="pr2">${CFG.PRICE} <small>جنيه / سنة</small></div><button class="btn gd" style="margin-right:auto" onclick="paywall('general')">اشترك الآن</button></div></div>`}
+function loginCard(t){return `<div class="card empty">${t}<br><br><button class="btn" onclick="go('auth')">تسجيل الدخول / حساب جديد</button></div>`}
+
+/* ===== الواجهات ===== */
+const NAVOF={detail:"profiles",form:"profiles",tasbeeh:"more",charity:"more",favs:"more",account:"more",auth:"more",admin:"more"};
+function go(r,a){route=r;arg=a||null;render();scrollTo({top:0})}
+function render(){
+ document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("on",b.dataset.r===(NAVOF[route]||route)));
+ $("#view").innerHTML=V[route]();updHead();
+ if(route==="form")bindForm();
+ if(route==="detail")loadFam();
+ if(route==="admin")loadCodes();
+}
+const V={
+home(){
+ const tot=S.profiles.reduce((a,x)=>a+(x.count||0),0),dua=DUAS[new Date().getDate()%DUAS.length][1];
+ const next=S.profiles.map(p=>({p,d:annDays(p.date)})).filter(x=>x.d!==null).sort((a,b)=>a.d-b.d)[0];
+ const rem=next&&next.d<=30?`<div class="card" style="background:#FFF8E4;border-color:#EBDDB0"><b style="color:var(--g)">🕯 تذكير بالذكرى</b><p class="mu" style="margin:3px 0 8px">${next.d===0?"اليوم ذكرى وفاة":"بعد "+next.d+" يومًا ذكرى وفاة"} ${esc(next.p.name)}. لا تنسَ الدعاء له والتصدق عنه.</p><button class="btn gd s" onclick="requirePro('card',()=>shareCard('${next.p.id}'))">أنشئ كارت الذكرى ${isPro()?"":'<span class="lock">PRO</span>'}</button></div>`:"";
+ const sub=isPro()?`<div class="card row" style="background:linear-gradient(135deg,#FFF8E4,#fff)"><div class="logo" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff">👑</div><div><b style="color:var(--g)">اشتراكك فعّال</b><div class="mu">متبقي ${daysLeft()} يومًا${daysLeft()<=30?" · حان وقت التجديد":""}</div></div></div>`:upCard("افتح كل المزايا","صور وروابط عائلية وكروت مشاركة وتذكير بالذكرى.");
+ return `<div class="hero"><h2>أثر طيب يبقى في القلوب</h2><p>أنشئ ملفًا لمن تحب، واجمع دعاءه وذكراه في مكان واحد، وشاركه مع العائلة.</p><button class="btn" onclick="newP()">＋ إنشاء ملف جديد</button></div>
+ <div class="stats"><div class="stat"><b>${S.profiles.length}</b><span>ملفات</span></div><div class="stat"><b>${tot}</b><span>دعوة</span></div><div class="stat"><b>${S.favs.length}</b><span>مفضلة</span></div></div>
+ ${rem}
+ <div class="grid"><button class="tile" onclick="go('profiles')"><i>♡</i><b>ملفات من أحب</b><small>الصور والذكريات</small></button><button class="tile" onclick="go('duas')"><i>۞</i><b>مكتبة الأدعية</b><small>ابحث واحفظ</small></button><button class="tile" onclick="go('tasbeeh')"><i>◉</i><b>المسبحة</b><small>عدّاد بهدف</small></button><button class="tile" onclick="go('charity')"><i>♧</i><b>أفكار الخير</b><small>أعمال نافعة</small></button></div>
+ <h3>دعاء اليوم</h3><div class="card"><p class="dua">${esc(dua)}</p><div class="acts"><button class="btn l" onclick="copyT(${J(dua)})">نسخ</button><button class="btn o" onclick="shareT(${J(dua)})">مشاركة</button></div></div>
+ ${S.profiles.length?`<h3>آخر الملفات</h3>${S.profiles.slice(0,2).map(p=>pcard(p)).join("")}`:""}
+ ${sub}`},
+profiles(){
+ if(!S.u)return `<h3>ملفات من أحب</h3>`+loginCard("سجّل الدخول لتحفظ ملفات من تحب بأمان<br>وتفتحها من أي جهاز.");
+ return `<div class="row"><h3 style="flex:1;margin:4px 0">ملفات من أحب</h3><button class="btn s" onclick="newP()">＋ إضافة</button></div>${S.profiles.length?S.profiles.map(p=>pcard(p,1)).join(""):'<div class="card empty">♡<br>لا توجد ملفات بعد.<br>ابدأ بإضافة أول ملف.</div>'}${!isPro()&&S.profiles.length?`<p class="mu" style="text-align:center">الخطة المجانية: ملف واحد</p>`:""}`},
+form(){
+ const p=arg?find(arg):null;if(!arg)ph="";else if(p&&ph==="")ph=p.photo||"";
+ const g=p?p.g:"m";
+ return `<h3>${p?"تعديل الملف":"إنشاء ملف جديد"}</h3><div class="card">
+ ${ph?`<img class="photo" id="pp" src="${ph}">`:`<div class="empty" id="pph">♡<br>صورة (اختياري)</div><img class="photo" id="pp" style="display:none">`}
+ <label>الصورة ${isPro()?"":'<span class="lock">PRO</span>'}</label><input id="fPhoto" type="file" accept="image/*">
+ <label>الاسم</label><input id="fName" maxlength="80" value="${esc(p?p.name:"")}" placeholder="اكتب الاسم">
+ <label>الصيغة</label><select id="fG"><option value="m" ${g==="m"?"selected":""}>متوفى (ذكر)</option><option value="f" ${g==="f"?"selected":""}>متوفاة (أنثى)</option></select>
+ <label>صلة القرابة</label><select id="fR">${REL.map(r=>`<option ${p&&p.rel===r?"selected":""}>${r}</option>`).join("")}</select>
+ <label>تاريخ الوفاة (اختياري)</label><input id="fD" type="date" value="${esc(p?p.date:"")}">
+ <label>ذكرى طيبة (اختياري)</label><textarea id="fM" maxlength="500" placeholder="كلمات طيبة أو ذكرى تحب الاحتفاظ بها">${esc(p?p.memory:"")}</textarea>
+ <label>الدعاء</label><textarea id="fU" placeholder="اتركه فارغًا لاستخدام الدعاء المقترح">${esc(p?p.dua:"")}</textarea>
+ <div class="row" style="margin-top:12px"><button class="btn f" id="sb" onclick="saveP('${arg||""}')">حفظ</button><button class="btn o" onclick="go(${arg?`'detail','${arg}'`:"'profiles'"})">إلغاء</button></div></div>`},
+detail(){
+ const p=find(arg);if(!p)return V.profiles();
+ const d=annDays(p.date),L=isPro()?"":' <span class="lock">PRO</span>';
+ const first=!isPro()&&fresh===p.id?upCard("ملف "+esc(p.name)+" جاهز 🤍","شارك رابطه مع العائلة ليدعوا له جميعًا، وأنشئ كارتًا جميلًا بصورته."):"";
+ return `${first}<div class="card" style="text-align:center;background:linear-gradient(145deg,#E6EEE5,#fff)">${p.photo?`<img class="photo" src="${p.photo}">`:""}
+ <div class="mu">${who(p)}</div><h2 style="color:var(--g);font-size:22px;margin:3px 0">${esc(p.name)}</h2><span class="chip">${esc(p.rel)}</span>
+ ${p.date?`<p class="mu" style="margin:8px 0 0">توفي في ${greg(p.date)}<br>${hijri(p.date)}</p>`:""}</div>
+ ${p.memory?`<div class="card"><b style="color:var(--g)">ذكرى طيبة</b><p>${esc(p.memory)}</p></div>`:""}
+ <div class="card" style="text-align:center"><div class="mu">عدد مرات الدعاء له</div><div class="big" id="cnt">${p.count||0}</div><button class="btn gd f" onclick="pray('${p.id}')">🤲 ادعُ له الآن</button>
+ ${p.shared?`<p class="mu" style="margin:10px 0 0">دعوات العائلة عبر الرابط: <b id="fam" style="color:var(--g)">...</b></p>`:""}</div>
+ <div class="card"><b style="color:var(--g)">الدعاء</b><p class="dua">${esc(p.dua)}</p><div class="acts"><button class="btn l" onclick="copyT(${J(p.dua)})">نسخ</button><button class="btn o" onclick="shareT(${J(who(p)+": "+p.name+"\n\n"+p.dua)})">مشاركة النص</button></div></div>
+ ${d!==null?`<div class="card" style="text-align:center"><div class="mu">الأيام حتى الذكرى السنوية</div><div class="big">${d}</div></div>`:""}
+ <div class="card"><b style="color:var(--g)">مشاركة مع العائلة</b><p class="mu">رابط يفتح صفحة تذكارية بدون تسجيل، وكارت صورة جاهز للواتساب.</p>
+ <div class="acts"><button class="btn" onclick="shareLink('${p.id}')">🔗 الرابط${L}</button><button class="btn l" onclick="requirePro('card',()=>shareCard('${p.id}'))">🖼 كارت صورة${L}</button></div></div>
+ <div class="acts"><button class="btn o" onclick="go('form','${p.id}')">تعديل</button><button class="btn o" onclick="go('profiles')">رجوع</button></div>`},
+duas(){
+ return `<h3>مكتبة الأدعية</h3><input id="qs" placeholder="ابحث بكلمة..." value="${esc(q)}" oninput="q=this.value;$('#dl').innerHTML=duaList()">
+ <select id="gs" style="margin-top:8px" onchange="gen=this.value;$('#dl').innerHTML=duaList()"><option value="m" ${gen==="m"?"selected":""}>للمتوفى (ذكر)</option><option value="f" ${gen==="f"?"selected":""}>للمتوفاة (أنثى)</option></select>
+ <div class="chips">${[["all","الكل"],...Object.entries(CATS)].map(([k,v])=>`<button class="chip ${cat===k?"on":""}" onclick="cat='${k}';render()">${v}</button>`).join("")}</div><div id="dl">${duaList()}</div>`},
+favs(){const l=S.favs.map(i=>DUAS[i]).filter(Boolean);return `<h3>الأدعية المفضلة</h3>${l.length?l.map(d=>`<div class="card"><div class="mu">${CATS[d[0]]}</div><p class="dua">${esc(d[1])}</p><button class="btn l s" onclick="copyT(${J(d[1])})">نسخ</button></div>`).join(""):'<div class="card empty">لم تحفظ أدعية بعد.</div>'}`},
+azkar(){
+ return `<h3>الأذكار اليومية</h3><p class="mu">اضغط على الذكر ليُنقص العدّاد.</p><div class="chips">${Object.entries(AZN).map(([k,v])=>`<button class="chip ${azc===k?"on":""}" onclick="azc='${k}';render()">${v}</button>`).join("")}</div>
+ ${AZ[azc].map(([t,n],i)=>{const k=azc+i,r=az[k]??n,pc=100-(r/n*100);return `<div class="card zk ${r===0?"done":""}" onclick="tapZ('${k}',${n})"><p class="dua" style="font-size:15px">${esc(t)}</p><span class="chip">${r===0?"✓ تم":"المتبقي: "+r+" من "+n}</span><div class="bar"><div style="width:${pc}%"></div></div></div>`}).join("")}`},
+more(){return `<h3>المزيد</h3><div class="grid"><button class="tile" onclick="go('tasbeeh')"><i>◉</i><b>المسبحة</b></button><button class="tile" onclick="go('charity')"><i>♧</i><b>أفكار الخير</b></button><button class="tile" onclick="go('favs')"><i>☆</i><b>المفضلة</b></button><button class="tile" onclick="go('account')"><i>☻</i><b>حسابي</b></button>${isAdmin()?`<button class="tile" onclick="go('admin')"><i>⚙</i><b>إدارة الأكواد</b></button>`:""}</div>`},
+tasbeeh(){
+ const t=+localStorage.getItem(TK)||0,tg=+(localStorage.getItem(TK+"g")??33);
+ return `<h3>المسبحة الإلكترونية</h3><div class="card" style="text-align:center"><div class="mu">عدد التسبيحات</div><div class="big" id="tc">${t}</div><div class="mu" id="tt">الهدف: ${tg||"مفتوح"}</div>
+ <button class="tb" onclick="tap()">سبّح</button>
+ <label style="text-align:right">الهدف</label><select onchange="localStorage.setItem(TK+'g',this.value);$('#tt').textContent='الهدف: '+(+this.value>0?this.value:'مفتوح')">${[33,100,1000,0].map(v=>`<option value="${v}" ${v===tg?"selected":""}>${v||"مفتوح"}</option>`).join("")}</select>
+ <button class="btn l" style="margin-top:12px" onclick="if(confirm('إعادة العداد؟')){localStorage.setItem(TK,0);render()}">إعادة العداد</button></div>`},
+charity(){return `<h3>أفكار للخير والصدقة الجارية</h3><p class="mu">أفكار عملية بحسب القدرة، ويُفضّل التعامل مع جهات موثوقة ومرخصة.</p>${CHARITY.map(c=>`<div class="card row" style="align-items:flex-start"><div class="logo" style="width:38px;height:38px;font-size:18px">${c[0]}</div><div><b style="color:var(--g)">${c[1]}</b><p class="mu" style="margin:0">${c[2]}</p></div></div>`).join("")}`},
+auth(){const s=amode==="signup";return `<h3>${s?"إنشاء حساب":"تسجيل الدخول"}</h3><div class="card"><p class="mu">${s?"أنشئ حسابك لحفظ ملفاتك بأمان وفتحها من أي جهاز.":"أهلًا بعودتك."}</p>
+ ${s?`<label>الاسم</label><input id="aN" placeholder="اسمك" autocomplete="name">`:""}
+ <label>رقم الهاتف</label><input id="aP" type="tel" dir="ltr" placeholder="01xxxxxxxxx" style="text-align:right" autocomplete="tel">
+ <label>كلمة المرور</label><input id="aW" type="password" dir="ltr" placeholder="6 أحرف على الأقل" style="text-align:right" autocomplete="${s?"new-password":"current-password"}">
+ <button class="btn f" style="margin-top:14px" id="aB" onclick="doAuth()">${s?"إنشاء الحساب":"دخول"}</button>
+ <button class="btn o f" style="margin-top:8px" onclick="amode='${s?"login":"signup"}';render()">${s?"لديّ حساب بالفعل":"إنشاء حساب جديد"}</button>
+ ${s?"":`<p class="mu" style="text-align:center;margin:10px 0 0">نسيت كلمة المرور؟ <a href="#" onclick="supportWA('نسيت كلمة المرور');return false" style="color:var(--gold)">تواصل مع الدعم</a></p>`}</div>`},
+account(){
+ if(!S.u)return `<h3>حسابي</h3>`+loginCard("لم تسجّل الدخول بعد.");
+ return `<h3>حسابي</h3>
+ <div class="card"><div class="row"><div class="logo">☻</div><div><b style="color:var(--g)">${esc(S.ud?S.ud.name:"")}</b><div class="mu" dir="ltr" style="text-align:right">${esc(S.ud?S.ud.phone:"")}</div></div></div></div>
+ ${isPro()?`<div class="card"><b style="color:var(--g)">👑 اشتراك سنوي فعّال</b><p class="mu" style="margin:3px 0 0">ينتهي بعد ${daysLeft()} يومًا.</p>${daysLeft()<=30?`<button class="btn wa f" style="margin-top:10px" onclick="subWA()">💬 تجديد الاشتراك عبر واتساب</button>`:""}</div>`:upCard("الاشتراك السنوي","كل المزايا لمدة سنة. وإن انتهى اشتراكك تبقى روابطك المشاركة تعمل.")}
+ <div class="card"><b style="color:var(--g)">كود التفعيل</b><div class="row" style="margin-top:8px"><input id="ac" placeholder="SJ-XXXX-XXXX" dir="ltr" style="text-align:center"><button class="btn" id="acb" onclick="redeem()">تفعيل</button></div></div>
+ <button class="btn wa f" onclick="supportWA()">💬 تواصل مع الدعم</button>
+ <button class="btn o f" style="margin-top:8px" onclick="FB.signOut(FB.auth).then(()=>go('home'))">تسجيل الخروج</button>`},
+admin(){
+ if(!isAdmin())return V.more();
+ return `<h3>إدارة أكواد التفعيل</h3><div class="card"><div class="row"><select id="gn"><option>1</option><option>5</option><option>10</option></select><button class="btn" style="flex:1" id="gb" onclick="genCodes()">إنشاء أكواد (سنة)</button></div></div>
+ <div id="cl"><div class="empty">جارٍ التحميل...</div></div>`}
+};
+function duaList(){
+ const n=q.trim(),l=DUAS.map((d,i)=>[d,i]).filter(([d])=>(cat==="all"||d[0]===cat)&&(d[1]+d[2]+CATS[d[0]]).includes(n));
+ return l.length?l.map(([d,i])=>{const t=gen==="f"?d[2]:d[1];return `<div class="card"><div class="mu">${CATS[d[0]]}</div><p class="dua">${esc(t)}</p><div class="acts"><button class="btn l" onclick="copyT(${J(t)})">نسخ</button><button class="btn o" onclick="shareT(${J(t)})">مشاركة</button><button class="btn o" onclick="fav(${i})">${S.favs.includes(i)?"★ محفوظ":"☆ حفظ"}</button></div></div>`}).join(""):'<div class="card empty">لا توجد نتائج.</div>';
+}
+
+/* ===== الدخول والبيانات ===== */
+function authErr(e){const c=(e&&e.code)||"";
+ if(c.includes("email-already-in-use"))return"الرقم مسجّل بالفعل، سجّل الدخول";
+ if(c.includes("invalid-credential")||c.includes("user-not-found")||c.includes("wrong-password"))return"الرقم أو كلمة المرور غير صحيحة";
+ if(c.includes("weak-password"))return"كلمة المرور ضعيفة";
+ if(c.includes("network"))return"تحقق من اتصال الإنترنت";
+ if(c.includes("too-many"))return"محاولات كثيرة، حاول لاحقًا";
+ if(c.includes("operation-not-allowed"))return"فعّل Email/Password في Firebase";
+ return"حدث خطأ، حاول مرة أخرى"}
+async function doAuth(){
+ const ph=$("#aP").value.trim().replace(/\s/g,""),pw=$("#aW").value;
+ if(!/^01[0125]\d{8}$/.test(ph))return toast("رقم الهاتف غير صحيح");
+ if(pw.length<6)return toast("كلمة المرور 6 أحرف على الأقل");
+ const b=$("#aB");b.disabled=true;
+ try{
+  if(amode==="signup"){const n=$("#aN").value.trim();if(!n){b.disabled=false;return toast("اكتب اسمك")}signup={name:n,phone:ph};await FB.createUserWithEmailAndPassword(FB.auth,ph+"@sadaqa.app",pw)}
+  else await FB.signInWithEmailAndPassword(FB.auth,ph+"@sadaqa.app",pw);
+ }catch(e){toast(authErr(e));b.disabled=false}
+}
+function needLogin(fn){if(S.u)return fn();afterAuth=fn;amode="signup";go("auth")}
+async function loadAll(){
+ const ref=FB.doc(FB.db,"users",S.u.uid);
+ let s=await FB.getDoc(ref);
+ if(!s.exists()){await FB.setDoc(ref,{name:signup.name||"",phone:signup.phone||S.u.email.split("@")[0],proUntil:0,createdAt:Date.now()});s=await FB.getDoc(ref)}
+ S.ud=s.data();
+ const q=await FB.getDocs(FB.collection(FB.db,"users",S.u.uid,"profiles"));
+ S.profiles=q.docs.map(d=>d.data()).sort((a,b)=>(b.createdAt||0)-(a.createdAt||0));
+}
+
+/* ===== الإجراءات ===== */
+function newP(){needLogin(()=>{if(S.profiles.length>=1&&!isPro())return requirePro("multi",()=>go("form"));go("form")})}
+function fav(i){S.favs=S.favs.includes(i)?S.favs.filter(x=>x!==i):[...S.favs,i];try{localStorage.setItem(FK,JSON.stringify(S.favs))}catch(e){}$("#dl").innerHTML=duaList()}
+function tapZ(k,n){const r=az[k]??n;if(r>0){az[k]=r-1;vib(15);if(r-1===0)vib([40,30,40])}render()}
+function tap(){const t=(+localStorage.getItem(TK)||0)+1,tg=+(localStorage.getItem(TK+"g")??33);localStorage.setItem(TK,t);$("#tc").textContent=t;vib(tg&&t%tg===0?[80,40,80]:12);if(tg&&t%tg===0)toast("أتممت "+t+" ✓")}
+async function pray(id){const p=find(id);p.count=(p.count||0)+1;$("#cnt").textContent=p.count;vib(20);toast("تقبّل الله دعاءك 🤍");try{await FB.updateDoc(pref(id),{count:FB.increment(1)})}catch(e){}}
+async function delP(id){if(!confirm("حذف الملف نهائيًا؟"))return;const p=find(id);try{await FB.deleteDoc(pref(id));if(p&&p.shared)await FB.deleteDoc(FB.doc(FB.db,"pages",id)).catch(()=>{});S.profiles=S.profiles.filter(x=>x.id!==id);render()}catch(e){toast("تعذّر الحذف")}}
+function bindForm(){
+ $("#fPhoto").addEventListener("click",e=>{if(!isPro()){e.preventDefault();requirePro("photo",()=>$("#fPhoto").click())}});
+ $("#fPhoto").addEventListener("change",e=>{
+ const f=e.target.files[0];if(!f)return;if(!f.type.startsWith("image/"))return toast("اختر صورة صالحة");
+ const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=360;let w=im.width,h=im.height;if(w>h&&w>m){h=Math.round(h*m/w);w=m}else if(h>m){w=Math.round(w*m/h);h=m}
+  const c=document.createElement("canvas");c.width=w;c.height=h;c.getContext("2d").drawImage(im,0,0,w,h);ph=c.toDataURL("image/jpeg",.65);
+  const pp=$("#pp");pp.src=ph;pp.style.display="block";const e2=$("#pph");if(e2)e2.style.display="none"};im.src=r.result};r.readAsDataURL(f)})}
+async function saveP(id){
+ const name=$("#fName").value.trim(),date=$("#fD").value,g=$("#fG").value;
+ if(!name)return toast("اكتب الاسم أولًا");
+ if(date&&date>new Date().toISOString().slice(0,10))return toast("راجع تاريخ الوفاة");
+ if(!id&&S.profiles.length>=1&&!isPro())return requirePro("multi",()=>saveP(id));
+ const data={name,g,rel:$("#fR").value,date,photo:ph,memory:$("#fM").value.trim(),dua:$("#fU").value.trim()||defDua(g)};
+ const b=$("#sb");b.disabled=true;
+ try{
+  let p;
+  if(id){p=find(id);Object.assign(p,data)}else{p=Object.assign({id:newId(),count:0,shared:false,createdAt:Date.now()},data);S.profiles.unshift(p)}
+  await FB.setDoc(pref(p.id),p);
+  if(p.shared)publishPage(p).catch(()=>{});
+  ph="";fresh=id?null:p.id;toast("تم الحفظ ✓");go("detail",p.id);
+ }catch(e){toast("تعذّر الحفظ، تحقق من الإنترنت");b.disabled=false}
+}
+async function publishPage(p){
+ const ref=FB.doc(FB.db,"pages",p.id),s=await FB.getDoc(ref);
+ const d={owner:S.u.uid,n:p.name,g:p.g,r:p.rel,d:p.date||"",m:p.memory||"",u:p.dua,photo:p.photo||"",updatedAt:Date.now()};
+ if(s.exists())await FB.updateDoc(ref,d);else await FB.setDoc(ref,Object.assign(d,{count:0,createdAt:Date.now()}));
+ if(!p.shared){p.shared=true;await FB.updateDoc(pref(p.id),{shared:true})}
+}
+function shareLink(id){requirePro("share",async()=>{
+ const p=find(id);
+ try{await publishPage(p)}catch(e){return toast("تعذّر إنشاء الرابط، حاول لاحقًا")}
+ const u=location.href.split("#")[0]+"#p="+p.id;
+ if(!/^https?:/.test(location.protocol))toast("الرابط يعمل بعد رفع الملف على استضافة");
+ shareT(who(p)+": "+p.name+"\nادعُ له من هنا:",u);
+ if(route==="detail")render();
+})}
+async function loadFam(){const p=find(arg);if(!p||!p.shared)return;try{const s=await FB.getDoc(FB.doc(FB.db,"pages",p.id));const e=$("#fam");if(s.exists()&&e)e.textContent=s.data().count||0}catch(e){}}
+function wrap(x,t,cx,y,mw,lh){let l="";for(const w of t.split(" ")){const tt=l?l+" "+w:w;if(x.measureText(tt).width>mw&&l){x.fillText(l,cx,y);y+=lh;l=w}else l=tt}x.fillText(l,cx,y);return y+lh}
+async function shareCard(id){
+ const p=find(id),c=document.createElement("canvas");c.width=1080;c.height=1350;const x=c.getContext("2d");
+ const gr=x.createLinearGradient(0,0,0,1350);gr.addColorStop(0,"#184A3B");gr.addColorStop(1,"#0F3329");x.fillStyle=gr;x.fillRect(0,0,1080,1350);
+ x.strokeStyle="#B8923F";x.lineWidth=4;x.strokeRect(40,40,1000,1270);
+ x.direction="rtl";x.textAlign="center";let y=330;
+ if(p.photo){await new Promise(r=>{const im=new Image();im.onload=()=>{x.save();x.beginPath();x.arc(540,300,150,0,7);x.clip();const s=Math.max(300/im.width,300/im.height);x.drawImage(im,540-im.width*s/2,300-im.height*s/2,im.width*s,im.height*s);x.restore();x.strokeStyle="#F1E4BE";x.lineWidth=6;x.beginPath();x.arc(540,300,150,0,7);x.stroke();r()};im.onerror=r;im.src=p.photo});y=530}
+ x.fillStyle="#F1E4BE";x.font="34px Tajawal,Tahoma,Arial";x.fillText(who(p),540,y);
+ x.fillStyle="#fff";x.font="bold 62px Tajawal,Tahoma,Arial";y=wrap(x,p.name,540,y+85,880,80);
+ x.fillStyle="#CFE0D6";x.font="34px Tajawal,Tahoma,Arial";x.fillText(p.rel,540,y+10);y+=90;
+ x.fillStyle="#fff";x.font="42px Tajawal,Tahoma,Arial";y=wrap(x,p.dua,540,y+30,860,78);
+ x.fillStyle="#D4B467";x.font="30px Tajawal,Tahoma,Arial";x.fillText("صدقة جارية · دعاء ووفاء لمن نحب",540,1260);
+ c.toBlob(async b=>{const f=new File([b],"sadaqa.png",{type:"image/png"});
+  if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f]})}catch(e){}}
+  else{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="sadaqa.png";a.click();toast("تم تنزيل الصورة")}})}
+
+/* ===== إدارة الأكواد (للمشرف فقط) ===== */
+function rndCode(){const cs="ABCDEFGHJKMNPQRSTUVWXYZ23456789",a=new Uint32Array(8);crypto.getRandomValues(a);const s=[...a].map(n=>cs[n%cs.length]).join("");return"SJ-"+s.slice(0,4)+"-"+s.slice(4)}
+async function genCodes(){
+ const n=+$("#gn").value,b=$("#gb");b.disabled=true;
+ try{for(let i=0;i<n;i++)await FB.setDoc(FB.doc(FB.db,"codes",rndCode()),{used:false,days:365,createdAt:Date.now()});toast("تم إنشاء "+n+" كود ✓");await loadCodes()}
+ catch(e){toast("تعذّر الإنشاء، تأكد أن حسابك مشرف")}
+ b.disabled=false}
+async function loadCodes(){
+ try{const s=await FB.getDocs(FB.query(FB.collection(FB.db,"codes"),FB.orderBy("createdAt","desc"),FB.limit(40)));codes=s.docs.map(d=>({id:d.id,...d.data()}));
+  const el=$("#cl");if(!el)return;
+  el.innerHTML=codes.length?codes.map(c=>`<div class="card row"><div style="flex:1"><span class="code">${c.id}</span><div class="mu">${c.used?"✓ مستخدم":"غير مستخدم"} · ${c.days} يوم</div></div>${c.used?"":`<button class="btn l s" onclick="copyT('${c.id}')">نسخ</button><button class="btn wa s" onclick="sendCode('${c.id}')">واتساب</button>`}</div>`).join(""):'<div class="card empty">لا توجد أكواد بعد.</div>'}
+ catch(e){const el=$("#cl");if(el)el.innerHTML='<div class="card empty">تعذّر التحميل</div>'}}
+function sendCode(c){const p=prompt("رقم واتساب العميل (01xxxxxxxxx)");if(!p)return;const n=p.replace(/\D/g,"").replace(/^0/,"20");openWA(`شكرًا لاشتراكك في صدقة جارية 🤍\nكود التفعيل الخاص بك:\n${c}\n\nافتح التطبيق ← حسابي ← اكتب الكود ← تفعيل.`,n)}
+
+/* ===== الصفحة العامة (تعمل دائمًا حتى بعد انتهاء الاشتراك) ===== */
+async function publicView(id){
+ document.body.classList.add("pub");$("#hb").style.display="none";
+ try{
+  const ref=FB.doc(FB.db,"pages",id),s=await FB.getDoc(ref);if(!s.exists())throw 0;
+  const o=s.data(),p={g:o.g,name:o.n,rel:o.r,date:o.d,memory:o.m,dua:o.u};let n=o.count||0,busy=false;
+  window.pubPray=()=>{if(busy)return;busy=true;setTimeout(()=>busy=false,1200);n++;$("#pc").textContent=n;vib(20);toast("تقبّل الله دعاءك 🤍");FB.updateDoc(ref,{count:FB.increment(1)}).catch(()=>{})};
+  $("#view").innerHTML=`<div class="card" style="text-align:center;background:linear-gradient(145deg,#E6EEE5,#fff)">${o.photo?`<img class="photo" src="${o.photo}">`:""}<div class="mu">${who(p)}</div><h2 style="color:var(--g);font-size:24px;margin:4px 0">${esc(p.name)}</h2><span class="chip">${esc(p.rel)}</span>${p.date?`<p class="mu" style="margin:8px 0 0">${greg(p.date)}<br>${hijri(p.date)}</p>`:""}</div>
+  ${p.memory?`<div class="card"><b style="color:var(--g)">ذكرى طيبة</b><p>${esc(p.memory)}</p></div>`:""}
+  <div class="card"><p class="dua" style="text-align:center">${esc(p.dua)}</p><div style="text-align:center"><div class="big" id="pc">${n}</div><div class="mu">دعوة له</div></div><button class="btn gd f" style="margin-top:10px" onclick="pubPray()">🤲 ادعُ له</button><div class="acts"><button class="btn l" onclick="copyT(${J(p.dua)})">نسخ الدعاء</button></div></div>
+  <button class="btn o f" onclick="location.hash='';location.reload()">أنشئ صفحة لمن تحب</button>`;
+ }catch(e){$("#view").innerHTML='<div class="card empty">هذه الصفحة غير متاحة.</div>'}
+}
+
+/* ===== البداية (تُستدعى بعد تحميل Firebase) ===== */
+function boot(){
+ const m=location.hash.match(/^#p=([\w-]+)$/);
+ if(m)return publicView(m[1]);
+ FB.onAuthStateChanged(FB.auth,async u=>{
+  try{if(u){S.u=u;await loadAll()}else{S.u=null;S.ud=null;S.profiles=[]}}
+  catch(e){toast("تعذّر تحميل بياناتك، تحقق من الإنترنت")}
+  if(route==="auth"&&S.u)route="home";
+  render();
+  if(S.u&&afterAuth){const f=afterAuth;afterAuth=null;f()}
+ });
+}
+</script>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getFirestore,doc,getDoc,setDoc,updateDoc,deleteDoc,collection,getDocs,query,orderBy,limit,writeBatch,increment} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+if(!CFG.FB.apiKey){
+ document.getElementById("view").innerHTML='<div class="card empty">أضف إعدادات Firebase داخل CFG.FB في أول الكود.</div>';
+}else{
+ const app=initializeApp(CFG.FB);
+ window.FB={auth:getAuth(app),db:getFirestore(app),onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,doc,getDoc,setDoc,updateDoc,deleteDoc,collection,getDocs,query,orderBy,limit,writeBatch,increment};
+ boot();
+}
+</script>
+</body>
+</html>
